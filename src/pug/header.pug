@@ -1,0 +1,19 @@
+header 
+    .container 
+        +BtnMenu()
+        .search-form 
+            img(src="assets/images/icons/search.png", alt="")
+            form 
+                input(type="text" placeholder="Хочу найти...")
+                button.submit Найти
+        .logo-wrapper
+            img(src="assets/images/icons/unreal.png", alt="")
+            img(src="assets/images/icons/unity.png", alt="")
+        .lang-switch
+            |Russian
+            .dropbox
+                span Russian
+                span English
+            select(name="lang")#lang
+                option(value="ru") Russian  
+                option(value="en") English  
