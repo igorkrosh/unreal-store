@@ -4,6 +4,7 @@ function Core()
 {
     SetTabSwitcher();
     SetModal();
+    InitOwlCarousel();
 }
 
 function SetTabSwitcher()
@@ -94,5 +95,17 @@ function HideModal(modalId)
         $(modalId).removeClass('active');
         $(modalId + ' .modal__dialog').removeClass('fadeOutDownBig');
         $('.modal__backdrop').remove();
+    });
+}
+
+function InitOwlCarousel()
+{
+    $('section.first-scroll .owl-carousel').owlCarousel({
+        items: 1,
+        autoHeight: true,
+        nav: true,
+        dots: true,
+        navContainer: $('section.first-scroll .owl-nav .nav'),
+        dotsContainer: $('section.first-scroll .owl-nav .dots')
     });
 }

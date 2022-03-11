@@ -10,5 +10,34 @@ html(lang="ru")
         include pug/head.pug
     body
         include pug/header.pug
+        section.first-scroll
+            .owl-carousel 
+                .slide
+                    img(src="assets/images/main_slider/slide1.jpg", alt="").bg 
+                    .container 
+                        .desc
+                            span.slide-title Библиотека Активов
+                            p 
+                                |Мы открываем для вас новый портал для разработчиков на движках Unreal Engine и Unity.
+                                |Тут будет все, что вам нужно: обучение, помощь с вашими проектами, ассеты,
+                                |реклама для ваших проектов, всевозможная поддержка, переводы блога
+                                |с офф.сайта и многое другое.
+                        button.btn Перейти в библиотеку 
+                .slide
+                    img(src="assets/images/main_slider/slide2.jpg", alt="").bg 
+                    .container 
+                        .desc
+                            span.slide-title Библиотека Активов 2
+                            p 
+                                |Мы открываем для вас новый портал для разработчиков на движках Unreal Engine и Unity.
+                                |Тут будет все, что вам нужно: обучение, помощь с вашими проектами, ассеты,
+                                |реклама для ваших проектов, всевозможная поддержка, переводы блога
+                                |с офф.сайта и многое другое.
+                        button.btn Перейти в библиотеку 
+            .container.navs-wrapper
+                .owl-nav
+                    .dots
+                    .nav
+
 
         include pug/scripts.pug
