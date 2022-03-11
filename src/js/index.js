@@ -108,4 +108,10 @@ function InitOwlCarousel()
         navContainer: $('section.first-scroll .owl-nav .nav'),
         dotsContainer: $('section.first-scroll .owl-nav .dots')
     });
+
+    $('section.hits .owl-carousel').owlCarousel({
+        items: 5,
+        dots: true,
+        dotsContainer: $('section.hits .owl-nav .dots')
+    })
 }
