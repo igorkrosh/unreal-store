@@ -71,7 +71,7 @@ button, a
 
 section 
 {
-    padding: 45px 0;
+    padding: 30px 0;
 }
 
 header 
@@ -506,6 +506,67 @@ section.hits
         display: flex;
         justify-content: center;
         margin-top: 20px;
+    }
+}
+
+section.catalog 
+{
+    .catalog-wrapper 
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 370px);
+        grid-auto-rows: 50px;
+        grid-gap: 30px;
+
+        .item 
+        {
+            
+            grid-row: span 2;
+            position: relative;
+            overflow: hidden;
+
+            img 
+            {
+                height: 100%;
+                width: auto;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: 0.3s;
+            }
+
+            span 
+            {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                bottom: 0;
+                padding: 10px 20px;
+                font-size: 24px;
+                font-weight: 700;
+                background: rgba(0, 0, 0, 0.7);
+            }
+        }
+
+        .item:hover 
+        {
+            img 
+            {
+                transform: translate(-50%, -50%) scale(1.05);
+            }
+        }
+
+        .item.big 
+        {
+            grid-column: span 1;
+            grid-row: span 6;
+        }
+
+        .item.middle
+        {
+            grid-row: span 3;
+        }
     }
 }
 
