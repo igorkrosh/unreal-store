@@ -265,6 +265,124 @@ header
     }
 }
 
+.menu-wrapper.active 
+{
+    left: 0;
+}
+
+.menu-wrapper 
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    pointer-events: none;
+    z-index: 200;
+    transition: 0.5s;
+
+    ul 
+    {
+        list-style: none;
+        padding-left: 0;
+
+        a
+        {
+            margin-bottom: 15px;
+            display: block;
+        }
+    }
+
+    .level-1
+    {
+        font-size: 21px;
+        font-weight: 700;
+    }
+
+    .level-2 
+    {
+        font-size: 16px;
+        color: #606060;
+        font-weight: 400;
+    }
+
+    .menu 
+    {
+        width: 550px;
+        height: 100%;
+        pointer-events: all;
+        position: relative;
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu:after 
+    {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .container 
+    {
+        height: 100%;   
+    }
+
+    .close-menu 
+    {
+        width: 40px;
+        height: 40px;
+        background: none;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .close-menu:hover 
+    {
+        transform: scale(0.9);
+    }
+
+    .close-menu:after 
+    {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transform: rotate(45deg);
+    }
+
+    .close-menu:before 
+    {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transform: rotate(-45deg);
+    }
+
+    .outer 
+    {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
 section.first-scroll
 {
     position: relative;
@@ -317,6 +435,7 @@ section.first-scroll
         left: 0;
         right: 0;
         margin: auto;
+        z-index: 1;
     }
 
     .owl-nav

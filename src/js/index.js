@@ -2,9 +2,11 @@ $(document).ready(Core);
 
 function Core()
 {
+    InitOwlCarousel();
+
     SetTabSwitcher();
     SetModal();
-    InitOwlCarousel();
+    SetMenu();
 }
 
 function SetTabSwitcher()
@@ -113,5 +115,16 @@ function InitOwlCarousel()
         items: 5,
         dots: true,
         dotsContainer: $('section.hits .owl-nav .dots')
+    })
+}
+
+function SetMenu()
+{
+    $('header .btn__menu').on('click', function () {
+        $('header .menu-wrapper').addClass('active')
+    })
+
+    $('header .menu-wrapper .close-menu').on('click', function () {
+        $('header .menu-wrapper').removeClass('active')
     })
 }
