@@ -50,6 +50,7 @@ button, a
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 }
 
 .btn:after
@@ -70,6 +71,11 @@ button, a
 .btn:hover:after
 {
     transform: skew(-30deg);
+}
+
+.btn-search 
+{
+    display: none;
 }
 
 section 
@@ -165,12 +171,12 @@ header
         display: flex;
         align-items: center;
 
-        img 
+        .logo 
         {
             margin-right: 15px;
         }
 
-        img:last-child
+        .logo:last-child
         {
             margin-right: 0;
         }
@@ -317,6 +323,11 @@ header
         flex-direction: column;
     }
 
+    .scroll-wrapper
+    {
+        overflow: auto;
+    }
+
     .menu:after 
     {
         content: '';
@@ -341,6 +352,7 @@ header
         background: none;
         position: relative;
         transition: 0.3s;
+        margin-bottom: 25px;
     }
 
     .close-menu:hover 
@@ -395,17 +407,8 @@ section.first-scroll
         display: flex;
         align-items: center;
         min-height: 785px;
-
-        .bg
-        {
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: -1;
-            width: 100%;
-            height: auto;
-            
-        }
+        background-size: cover;
+        background-position: center;
 
         .slide-title 
         {
@@ -547,12 +550,21 @@ section.hits
         background: #000000;
         margin: 5px;
 
-        .img 
+        .img-wrapper 
         {
             width: 100%;
             height: 175px;
-            position: relative;
             overflow: hidden;
+        }
+
+        .img 
+        {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            transition: 0.3s;
 
             img
             {
@@ -623,7 +635,7 @@ section.hits
         }
     }
 
-    .slide:hover img 
+    .slide:hover .img 
     {
         transform: scale(1.05)
     }
@@ -652,15 +664,23 @@ section.catalog
             position: relative;
             overflow: hidden;
 
-            img 
+            .img-wrapper
             {
                 height: 100%;
-                width: auto;
+                width: 100%;
                 position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                transition: 0.3s;
+                left: 0;
+                top: 0;
+                overflow: hidden;
+
+                .img 
+                {
+                    width: 100%;
+                    height: 100%;
+                    transition: 0.3s;
+                    background-position: center;
+                    background-size: cover;
+                }
             }
 
             span 
@@ -678,9 +698,9 @@ section.catalog
 
         .item:hover 
         {
-            img 
+            .img 
             {
-                transform: translate(-50%, -50%) scale(1.05);
+                transform: scale(1.05);
             }
         }
 
@@ -711,15 +731,14 @@ section.news
             grid-column: span 2;
             position: relative;
             overflow: hidden;
+            
 
-            img 
+            .img 
             {
-                position: absolute;
+                background-position: center;
+                background-size: cover;
                 height: 100%;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);     
-                transition: 0.3s;           
+                transition: 0.3s;  
             }
 
             span 
@@ -734,11 +753,11 @@ section.news
             }
         }
 
-        .main-item:hover 
+        .main-item:hover
         {
-            img 
+            .img 
             {
-                transform: translate(-50%, -50%) scale(1.05);  
+                transform: scale(1.05);  
             }
         }
 
@@ -748,21 +767,23 @@ section.news
             flex-wrap: wrap;
             background: #000000;
 
-            .img 
+            .img-wrapper
             {
                 width: 100%;
                 height: 210px;
+                overflow: hidden;
+            }
+
+            .img 
+            {
+                width: 100%;
+                height: 100%;
                 position: relative;
                 overflow: hidden;
-
-                img 
-                {
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);     
-                    transition: 0.3s;   
-                }
+                transition: 0.3s;  
+                overflow: hidden;
+                background-position: center;
+                background-size: cover;
             }
 
             .desc 
@@ -791,9 +812,9 @@ section.news
 
         .item:hover 
         {
-            img 
+            .img
             {
-                transform: translate(-50%, -50%) scale(1.05);  
+                transform: scale(1.05);  
             }
         }
     }
@@ -858,6 +879,48 @@ footer
             width: 24px;
             height: 24px;
             background: url(../images/icons/vk.png);
+        }
+    }
+}
+
+.modal__content
+{
+    .modal-title
+    {
+        font-size: 28px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .search-form
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .input-wrapper 
+        {
+            height: 45px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            input 
+            {
+                height: 100%;
+                width: 100%;
+                font-size: 16px;
+                padding: 0 20px;
+                background: none;
+                color: #fff;
+            }
+
+            img 
+            {
+                margin-right: 15px;
+            }
         }
     }
 }

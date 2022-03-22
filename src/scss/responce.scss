@@ -4,6 +4,22 @@
     {
         max-width: 1024px;
     }
+
+    section.catalog .catalog-wrapper
+    {
+        grid-template-columns: repeat(3, 311px);
+        grid-auto-rows: 35px;
+    }
+
+    section.news .news-wrapper
+    {
+        grid-template-columns: repeat(4, 226px);
+    }
+
+    section.catalog .catalog-wrapper .item span
+    {
+        font-size: 22px;
+    }
 }
 
 @media(max-width: 1024px)
@@ -11,6 +27,36 @@
     .container
     {
         max-width: 992px;
+    }
+
+    section.catalog .catalog-wrapper
+    {
+        grid-template-columns: repeat(3, 300px);
+    }
+
+    section.news .news-wrapper
+    {
+        grid-template-columns: repeat(6, 135px);
+    }
+
+    section.news .news-wrapper .main-item
+    {
+        grid-column: span 4;
+    }
+
+    section.news .news-wrapper .item:nth-child(2)
+    {
+        grid-column: span 2;
+    }
+
+    section.news .news-wrapper .item:nth-child(3), section.news .news-wrapper .item:nth-child(4)
+    {
+        grid-column: span 3;
+    }
+
+    section.news .news-wrapper .item
+    {
+        grid-column: span 2;
     }
 }
 
@@ -20,6 +66,57 @@
     {
         max-width: 768px;
     }
+
+    header .logo-wrapper
+    {
+        .logo:first-child
+        {
+            width: 60px;
+            overflow: hidden;
+        }
+
+        .logo:last-child
+        {
+            width: 50px;
+            overflow: hidden;
+        }
+    }
+
+    section.first-scroll .container.navs-wrapper
+    {
+        bottom: 50px;
+    }
+
+    section.catalog .catalog-wrapper
+    {
+        grid-template-columns: repeat(2, 354px);
+    }
+
+    section.news .news-wrapper
+    {
+        grid-template-columns: repeat(6, 97px);
+    }
+
+    .menu-wrapper .menu
+    {
+        width: 400px;
+    }
+
+    section.catalog .catalog-wrapper .item
+    {
+        grid-row: span 3;
+    }
+
+    section.news .news-wrapper .main-item
+    {
+        grid-column: span 6;
+        height: 400px;
+    }
+
+    section.news .news-wrapper .item:nth-child(2), section.news .news-wrapper .item
+    {
+        grid-column: span 3;
+    }
 }
 
 @media(max-width: 768px)
@@ -28,6 +125,42 @@
     {
         max-width: 576px;
     }
+
+    .btn-search 
+    {
+        display: flex;
+        border: none;
+        background: rgba(0, 0, 0, 0.7);
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .search-form
+    {
+        display: none;
+    }
+
+    section.first-scroll .slide .desc
+    {
+        width: 85%;
+    }
+
+    section.catalog .catalog-wrapper
+    {
+        grid-template-columns: 100%;
+    }
+
+    section.news .news-wrapper
+    {
+        grid-template-columns: 100%;
+    }
+
+    section.news .news-wrapper .main-item, section.news .news-wrapper .item:nth-child(2), section.news .news-wrapper .item, section.news .news-wrapper .item:nth-child(3), section.news .news-wrapper .item:nth-child(4)
+    {
+        grid-column: span 1;
+    }
 }
 
 @media(max-width: 576px)
@@ -35,5 +168,88 @@
     .container
     {
         max-width: 100%;
+    }
+
+    header .logo-wrapper 
+    {
+        .logo:first-child 
+        {
+            width: 40px;
+            margin-right: 8px;
+            img 
+            {
+                height: 40px;
+            }
+        }
+        
+        
+
+        .logo:nth-child(2) 
+        {
+            width: 40px;
+            img 
+            {
+                height: 35px;
+            }
+        }
+        
+    }
+
+    .btn-search
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn__menu
+    {
+        width: 30px;
+        height: 22px;
+    }
+
+    section.first-scroll .slide .slide-title
+    {
+        font-size: 32px;
+    }
+
+    section.first-scroll .slide
+    {
+        min-height: auto;
+    }
+
+    section.first-scroll .slide
+    {
+        padding-top: 125px;
+        padding-bottom: 150px;
+    }
+
+    section.first-scroll .container.navs-wrapper
+    {
+        bottom: 10px;
+    }
+
+    section.catalog .catalog-wrapper .item span
+    {
+        font-size: 20px;
+    }
+
+    .modal__content .modal-title
+    {
+        font-size: 20px;
+    }
+
+    .modal__content .btn 
+    {
+        min-width: 200px;
+    }
+
+    .menu-wrapper .menu
+    {
+        width: 100%;
+    }
+
+    .menu-wrapper .menu
+    {
+        position: initial;
     }
 }

@@ -1,14 +1,18 @@
 header 
     .container 
         +BtnMenu()
+        button.btn-search(modal="modalSearch")
+            img(src="assets/images/icons/search.png", alt="")
         .search-form 
             img(src="assets/images/icons/search.png", alt="")
             form 
                 input(type="text" placeholder="Хочу найти...")
                 button.submit Найти
         .logo-wrapper
-            img(src="assets/images/icons/unreal.png", alt="")
-            img(src="assets/images/icons/unity.png", alt="")
+            .logo
+                img(src="assets/images/icons/unreal.png", alt="")
+            .logo
+                img(src="assets/images/icons/unity.png", alt="")
         .lang-switch
             |Russian
             .dropbox
@@ -20,40 +24,41 @@ header
         .menu-wrapper
             .container
                 .menu
-                    button.close-menu
-                    ul.level-1.outer
-                        li 
-                            a(href="") Активы 
-                            ul.level-2
-                                li 
-                                    a(href="")  Блюпринты
-                                li
-                                    a(href="")  Музыка
-                                li
-                                    a(href="")  Звуковые эффекты
-                                li
-                                    a(href="")  2d ассеты
-                                li
-                                    a(href="")  Анимации
-                                li
-                                    a(href="")  Окружение
-                                li
-                                    a(href="")  Оружие
-                                li
-                                    a(href="")  Визуальные эффекты
-                                li
-                                    a(href="")  Материалы и текстуры
-                                li
-                                    a(href="")  Декор
-                                li
-                                    a(href="")  Персонажи
-                                li
-                                    a(href="")  Архитектура
-                                li
-                                    a(href="")  Скрипты C#
-                        li
-                            a(href="") Статьи 
-                        li
-                            a(href="") Ваши проекты 
-                        li
-                            a(href="") Связаться с нами 
+                    .scroll-wrapper
+                        button.close-menu
+                        ul.level-1.outer
+                            li 
+                                a(href="") Активы 
+                                ul.level-2
+                                    li 
+                                        a(href="")  Блюпринты
+                                    li
+                                        a(href="")  Музыка
+                                    li
+                                        a(href="")  Звуковые эффекты
+                                    li
+                                        a(href="")  2d ассеты
+                                    li
+                                        a(href="")  Анимации
+                                    li
+                                        a(href="")  Окружение
+                                    li
+                                        a(href="")  Оружие
+                                    li
+                                        a(href="")  Визуальные эффекты
+                                    li
+                                        a(href="")  Материалы и текстуры
+                                    li
+                                        a(href="")  Декор
+                                    li
+                                        a(href="")  Персонажи
+                                    li
+                                        a(href="")  Архитектура
+                                    li
+                                        a(href="")  Скрипты C#
+                            li
+                                a(href="") Статьи 
+                            li
+                                a(href="") Ваши проекты 
+                            li
+                                a(href="") Связаться с нами 

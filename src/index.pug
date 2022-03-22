@@ -12,8 +12,7 @@ html(lang="ru")
         include pug/header.pug
         section.first-scroll
             .owl-carousel 
-                .slide
-                    img(src="assets/images/main_slider/slide1.jpg", alt="").bg 
+                .slide(style="background-image: url(assets/images/main_slider/slide1.jpg)")
                     .container 
                         .desc
                             span.slide-title Библиотека Активов
@@ -23,8 +22,7 @@ html(lang="ru")
                                 |реклама для ваших проектов, всевозможная поддержка, переводы блога
                                 |с офф.сайта и многое другое.
                         button.btn Перейти в библиотеку 
-                .slide
-                    img(src="assets/images/main_slider/slide2.jpg", alt="").bg 
+                .slide(style="background-image: url(assets/images/main_slider/slide2.jpg)")
                     .container 
                         .desc
                             span.slide-title Библиотека Активов 2
@@ -64,97 +62,103 @@ html(lang="ru")
                 h2.title Категории активов
                 .catalog-wrapper 
                     a(href="").item.big
-                        img(src="assets/images/catalog/1.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/1.jpg)")
                         span Блюпринты
                     a(href="").item
-                        img(src="assets/images/catalog/2.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/2.jpg)")
                         span Музыка
                     a(href="").item.middle
-                        img(src="assets/images/catalog/5.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/5.jpg)")
                         span Анимации
                     a(href="").item
-                        img(src="assets/images/catalog/3.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/3.jpg)")
                         span Звуковые эффекты
                     a(href="").item.middle
-                        img(src="assets/images/catalog/6.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/6.jpg)")
                         span Окружение
                     a(href="").item
-                        img(src="assets/images/catalog/4.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/4.jpg)")
                         span 2d ассеты
                     a(href="").item
-                        img(src="assets/images/catalog/7.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/5.jpg)")
                         span Оружие
                     a(href="").item
-                        img(src="assets/images/catalog/8.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/8.jpg)")
                         span Визуальные эффекты
                     a(href="").item
-                        img(src="assets/images/catalog/9.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/9.jpg)")
                         span Материалы и текстуры
                     a(href="").item.big
-                        img(src="assets/images/catalog/10.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/10.jpg)")
                         span Декор
                     a(href="").item.middle
-                        img(src="assets/images/catalog/11.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/11.jpg)")
                         span Персонажи
                     a(href="").item.big
-                        img(src="assets/images/catalog/13.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/13.jpg)")
                         span Скрипты C#
                     a(href="").item.middle
-                        img(src="assets/images/catalog/12.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/catalog/12.jpg)")
                         span Архитектура
         section.news
             .container 
                 h2.title Статьи и видеоуроки
                 .news-wrapper 
                     a(href="").main-item
-                        .img 
-                            img(src="assets/images/news/1.jpg", alt="")
+                        .img(style="background-image:url(assets/images/news/1.jpg)")
                         span Релиз Unreal Engine 5
                     a(href="").item 
-                        .img
-                            img(src="assets/images/news/2.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/news/2.jpg)")
                         .desc
                             span.news-title Визуальное программирование в Unity
                             p Подробный урок по Playmaker Unity. Разработка RTS
                     a(href="").item 
-                        .img
-                            img(src="assets/images/news/3.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/news/3.jpg)")
                         .desc
                             span.news-title Бесплатные ассеты марта 2022
                             p Подборка бесплатных активов для Unreal Engine
                     a(href="").item 
-                        .img
-                            img(src="assets/images/news/2.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/news/2.jpg)")
                         .desc
                             span.news-title Визуальное программирование в Unity
                             p Подробный урок по Playmaker Unity. Разработка RTS
                     a(href="").item 
-                        .img
-                            img(src="assets/images/news/3.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/news/3.jpg)")
                         .desc
                             span.news-title Бесплатные ассеты марта 2022
                             p Подборка бесплатных активов для Unreal Engine
                     a(href="").item 
-                        .img
-                            img(src="assets/images/news/2.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/news/2.jpg)")
                         .desc
                             span.news-title Визуальное программирование в Unity
                             p Подробный урок по Playmaker Unity. Разработка RTS
                     a(href="").item 
-                        .img
-                            img(src="assets/images/news/3.jpg", alt="")
+                        .img-wrapper
+                            .img(style="background-image:url(assets/images/news/3.jpg)")
                         .desc
                             span.news-title Бесплатные ассеты марта 2022
                             p Подборка бесплатных активов для Unreal Engine
                 .btn-wrapper 
                     a(href="").btn Все статьи 
-        footer 
-            .container 
-                .copyright 
-                    |Copyright 2022
-                .soc-wrapper 
-                    a(href="").soc.email 
-                    a(href="").soc.vk  
+        include pug/footer.pug
                         
 
 

@@ -7,4 +7,12 @@ mixin Modal(id, modalTemplate)
 
 mixin ModalTemplate
     h1 ModalTemplate
+
+mixin ModalSearch
+    span.modal-title Поиск по сайту
+    form.search-form 
+        .input-wrapper
+            img(src="assets/images/icons/search.png", alt="")
+            input(type="text" placeholder="Хочу найти...")
+        button.btn Найти
     

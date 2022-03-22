@@ -112,9 +112,22 @@ function InitOwlCarousel()
     });
 
     $('section.hits .owl-carousel').owlCarousel({
-        items: 5,
         dots: true,
-        dotsContainer: $('section.hits .owl-nav .dots')
+        dotsContainer: $('section.hits .owl-nav .dots'),
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 5
+            }
+        }
     })
 }
 
